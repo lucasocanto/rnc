@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.entity.EntityActivity"
+    android:background="@color/light_blue_500">
+
+    <ImageView
+        android:id="@+id/image_entity"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:scaleType="fitStart"
+        android:src="@drawable/min_relaciones_exteriores_comercio_internacional_culto"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginStart="10dp"/>
+
+    <ImageView
+        android:id="@+id/logo_entity"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:scaleType="fitEnd"
+        android:src="@drawable/logo"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/name_entity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:textSize="22sp"
+        android:layout_marginStart="10dp"
+        android:maxLines="2"
+        android:layout_marginTop="25dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/image_entity" />
+
+    <TextView
+        android:id="@+id/ci_title_entity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/ci_full_text"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        android:textStyle="italic"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="@+id/name_entity"
+        app:layout_constraintTop_toBottomOf="@+id/name_entity" />
+
+
+    <TextView
+        android:id="@+id/ci_entity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        android:textStyle="italic"
+        android:layout_marginStart="5dp"
+        app:layout_constraintBottom_toBottomOf="@+id/ci_title_entity"
+        app:layout_constraintStart_toEndOf="@+id/ci_title_entity"
+        app:layout_constraintTop_toTopOf="@+id/ci_title_entity" />
+
+    <TextView
+        android:id="@+id/authority_title_entity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/authority"
+        android:textColor="@color/black"
+        android:layout_marginTop="5dp"
+        android:textSize="14sp"
+        android:textStyle="italic"
+        app:layout_constraintStart_toStartOf="@+id/ci_title_entity"
+        app:layout_constraintTop_toBottomOf="@+id/ci_title_entity" />
+
+    <TextView
+        android:id="@+id/authority_entity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:text="@string/not_defined"
+        android:textSize="14sp"
+        android:maxWidth="200dp"
+        android:layout_marginStart="5dp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toBottomOf="@+id/authority_title_entity"
+        app:layout_constraintStart_toEndOf="@+id/authority_title_entity" />
+
+    <TextView
+        android:id="@+id/type_entity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:layout_marginTop="5dp"
+        android:textSize="14sp"
+        android:textStyle="italic"
+        app:layout_constraintStart_toStartOf="@+id/authority_title_entity"
+        app:layout_constraintTop_toBottomOf="@+id/authority_title_entity" />
+
+    <TextView
+        android:id="@+id/title_location_entity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/location_title"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/type_entity"
+        app:layout_constraintTop_toBottomOf="@+id/type_entity"
+        android:layout_marginTop="20dp"/>
+
+    <TextView
+        android:id="@+id/address_entity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        android:maxWidth="200dp"
+        android:layout_marginTop="10dp"
+        android:textStyle="italic"
+        app:layout_constraintStart_toStartOf="@+id/title_location_entity"
+        app:layout_constraintTop_toBottomOf="@+id/title_location_entity"/>
+
+    <TextView
+        android:id="@+id/location_entity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        android:maxWidth="200dp"
+        android:layout_marginTop="5dp"
+        android:textStyle="italic"
+        app:layout_constraintStart_toStartOf="@+id/address_entity"
+        app:layout_constraintTop_toBottomOf="@+id/address_entity"/>
+
+    <TextView
+        android:id="@+id/title_zip_code_entity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/zip_code_title"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        android:textStyle="italic"
+        android:layout_marginTop="5dp"
+        app:layout_constraintStart_toStartOf="@+id/location_entity"
+        app:layout_constraintTop_toBottomOf="@+id/location_entity"/>
+
+    <TextView
+        android:id="@+id/zip_code_entity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:text="@string/not_defined"
+        android:textSize="14sp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toBottomOf="@+id/title_zip_code_entity"
+        app:layout_constraintStart_toEndOf="@+id/title_zip_code_entity"
+        android:layout_marginStart="5dp"/>
+
+    <TextView
+        android:id="@+id/title_contact_data_entity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/contact_data_title"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/title_zip_code_entity"
+        app:layout_constraintTop_toBottomOf="@+id/title_zip_code_entity"
+        android:layout_marginTop="20dp"/>
+
+    <TextView
+        android:id="@+id/mail_entity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        android:maxWidth="200dp"
+        android:text="@string/not_defined"
+        android:layout_marginTop="10dp"
+        android:textStyle="italic"
+        app:layout_constraintStart_toStartOf="@+id/title_contact_data_entity"
+        app:layout_constraintTop_toBottomOf="@+id/title_contact_data_entity"/>
+
+    <TextView
+        android:id="@+id/phone_entity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        android:maxWidth="200dp"
+        android:layout_marginTop="10dp"
+        android:textStyle="italic"
+        app:layout_constraintStart_toStartOf="@+id/mail_entity"
+        app:layout_constraintTop_toBottomOf="@+id/mail_entity"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
